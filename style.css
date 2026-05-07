@@ -1,64 +1,69 @@
-/* Custom Neo-Brutalist Theme */
+/* Pastel Gradient & Soft Glass Theme */
 body {
-    background-color: #ffd600; /* BOLD YELLOW background */
-    color: #000; /* High-Contrast Black text */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    /* Soft gradient background */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #444;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, section {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.7); /* Translucent white */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 h1, h2, h3 {
-    text-transform: uppercase;
-    color: #000;
-    /* NEO-BRUTALIST FONT: Thick and bold */
-    font-weight: 900;
-    background-color: #fff; /* White background for headers */
-    border: 3px solid #000; /* Thick black border */
-    padding: 10px;
-    display: inline-block;
-    margin-bottom: 20px;
-    
-    /* NEO-BRUTALIST SHADOW: Solid, not fuzzy */
-    box-shadow: 5px 5px 0px #000;
-}
-
-section {
-    margin-bottom: 40px;
-    padding: 25px;
-    border: 3px solid #000; /* Thick black border */
-    background-color: #fff; /* White cards for sections */
-    
-    /* Solid Shadow */
-    box-shadow: 8px 8px 0px #000;
+    /* Pastel Pink to Blue Gradient Text */
+    background: linear-gradient(to right, #ff9a9e, #a18cd1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
 }
 
 a {
-    color: #000;
+    color: #764ba2;
     text-decoration: none;
-    background: #ff77f2; /* HOT PINK for accents */
-    padding: 5px 10px;
-    border: 2px solid #000;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 50px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    transition: 0.3s;
 }
 
 a:hover {
-    background: #fff; /* White on hover */
-    box-shadow: 3px 3px 0px #000;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
 }
 
 ul {
-    list-style-type: square;
-    font-size: 1.1em;
+    list-style: none;
+    padding: 0;
 }
 
 li {
-    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
-/* Styling for your picture (if you have one) */
+/* Picture styling */
 header img {
-    border: 5px solid #000;
-    box-shadow: 10px 10px 0px #000;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
