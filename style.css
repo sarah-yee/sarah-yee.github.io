@@ -1,5 +1,4 @@
 :root {
-    /* Muted Luxury Palette */
     --stone-white: #f4f7f6;
     --slate-blue: #d1d9e0;
     --dusty-lavender: #e2d5de;
@@ -14,7 +13,6 @@ body {
     color: var(--deep-charcoal);
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    /* Soft, sophisticated ambient background */
     background: linear-gradient(-45deg, var(--stone-white), var(--slate-blue), var(--dusty-lavender));
     background-size: 400% 400%;
     animation: ambientFlow 18s ease infinite;
@@ -28,7 +26,7 @@ body {
 }
 
 header {
-    padding: 90px 20px 50px;
+    padding: 80px 20px 40px;
     text-align: center;
 }
 
@@ -37,19 +35,18 @@ header h1 {
     font-size: 3.5rem;
     font-weight: 700;
     margin: 0;
-    /* Metallic Slate Gradient */
     background: linear-gradient(to right, #2c3e50, #7f8c8d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     color: var(--muted-steel);
-    margin-top: 12px;
-    letter-spacing: 1px;
+    margin-top: 10px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 main {
@@ -63,23 +60,17 @@ section {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
-    padding: 45px;
-    margin-bottom: 35px;
+    padding: 40px;
+    margin-bottom: 30px;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 15px 35px rgba(44, 62, 80, 0.05);
-    transition: all 0.4s ease;
-}
-
-section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(44, 62, 80, 0.08);
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.04);
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--deep-charcoal);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -88,15 +79,30 @@ h2::after {
     position: absolute;
     bottom: -8px;
     left: 0;
-    width: 40px;
+    width: 30px;
     height: 2px;
     background: var(--muted-steel);
+}
+
+.fact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fact-item {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    border-left: 2px solid var(--slate-blue);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 .project-card {
@@ -106,73 +112,63 @@ h2::after {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.project-card h3 {
-    font-family: 'Playfair Display', serif;
-    margin-top: 0;
-    font-size: 1.3rem;
-}
-
 .tech-tag {
     color: var(--muted-steel);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .timeline-item {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     padding-left: 20px;
     border-left: 1px solid var(--slate-blue);
 }
 
 .timeline-item h4 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin: 0;
     font-size: 1.1rem;
 }
 
 .location {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--muted-steel);
     font-weight: 500;
-    margin: 4px 0 10px;
+    margin: 4px 0 8px;
 }
 
 .contact-links {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .contact-links a {
     display: inline-block;
-    margin: 0 10px;
-    padding: 14px 30px;
+    margin: 0 8px;
+    padding: 12px 25px;
     background: var(--deep-charcoal);
     color: white;
     text-decoration: none;
-    border-radius: 4px; /* Classic sharp-rounded professional look */
+    border-radius: 4px;
     font-weight: 500;
-    font-size: 0.9rem;
-    transition: all 0.3s;
+    font-size: 0.8rem;
+    transition: 0.3s;
 }
 
 .contact-links a:hover {
     background: var(--muted-steel);
-    transform: translateY(-2px);
 }
 
 footer {
     text-align: center;
     padding: 40px;
     color: var(--muted-steel);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 0.7rem;
 }
 
 @media (max-width: 600px) {
     .project-grid { grid-template-columns: 1fr; }
-    header h1 { font-size: 2.5rem; }
 }
