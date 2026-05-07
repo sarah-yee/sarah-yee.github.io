@@ -1,0 +1,56 @@
+/* Custom Cyberpunk Theme */
+body {
+    background-color: #050505; /* Deep black */
+    color: #00f2ff; /* Neon Cyan text */
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ff00ea; /* Hot Pink headings */
+    text-shadow: 2px 2px #00f2ff; /* Cyan shadow effect */
+    border-bottom: 2px solid #ff00ea;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Glowing Border Effect for Sections */
+section:hover {
+    border-color: #00f2ff;
+    box-shadow: 0 0 10px #00f2ff;
+    transition: 0.3s;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    background: #ff00ea;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+a:hover {
+    background: #00f2ff;
+    color: #000;
+}
+
+ul {
+    list-style: " > ";
+}
+
+/* Styling for your picture */
+header img {
+    border: 3px solid #ff00ea;
+    box-shadow: 0 0 15px #ff00ea;
+}
