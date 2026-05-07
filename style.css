@@ -1,22 +1,22 @@
 /* 
-   SARAH YEE - TERMINAL NEON STYLE
-   A blend of MajorHayden.com structure and Cyberpunk aesthetics
+   SARAH YEE - STYLE.CSS
+   Theme: Neon Synthwave Terminal (Man Page Aesthetic)
 */
 
 :root {
     /* Color Palette */
-    --bg-color: #0d0d0d;         /* Deep obsidian background */
-    --text-color: #e0e0e0;       /* Soft light grey for readability */
+    --bg-color: #0d0d0d;         /* Deep black background */
+    --text-color: #e0e0e0;       /* Soft grey-white for body text */
     --header-pink: #ff00ff;      /* Neon Pink for section titles */
-    --cmd-green: #00ff9f;        /* Acid Green for roles and names */
+    --cmd-green: #00ff9f;        /* Acid Green for company names and commands */
     --link-blue: #00b3ff;        /* Electric Blue for dates and links */
-    --dim-text: #666666;         /* Dimmed text for meta-info */
+    --dim-text: #666666;         /* Dimmed grey for system metadata */
     
     /* Typography */
     --font-mono: 'Courier New', Courier, monospace;
 }
 
-/* Global Styles */
+/* Global Reset & Layout */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -33,7 +33,7 @@ body {
     width: 100%;
 }
 
-/* Header & Footer (The "Man Page" Bar) */
+/* Header & Footer (The System Bar) */
 header, footer {
     display: flex;
     justify-content: space-between;
@@ -56,35 +56,36 @@ footer {
     padding-top: 10px;
 }
 
-/* Section Headings (NAME, SYNOPSIS, etc.) */
+/* Section Headings (NAME, SYNOPSIS, DESCRIPTION) */
 h2 {
     color: var(--header-pink);
     font-size: 1.1rem;
     text-transform: uppercase;
     margin-top: 40px;
     margin-bottom: 10px;
-    text-shadow: 0 0 5px rgba(255, 0, 255, 0.3);
+    text-shadow: 0 0 5px rgba(255, 0, 255, 0.3); /* Subtle glow */
 }
 
-/* Names, Roles, and Major Highlights */
+/* Titles and Roles */
 h3, strong {
     color: var(--cmd-green);
     font-weight: bold;
 }
 
-/* Date Tags and Locations */
-.subtitle, .date-tag {
+/* Job Subtitles (Dates and Locations) */
+.subtitle {
     color: var(--link-blue);
     font-size: 0.9rem;
     margin-top: -5px;
     margin-bottom: 10px;
 }
 
-/* Indentation & Lists */
+/* Indentation Logic */
 .indent {
     padding-left: 40px;
 }
 
+/* List Styling */
 ul {
     list-style-type: none;
     padding-left: 40px;
@@ -96,6 +97,7 @@ ul li {
     position: relative;
 }
 
+/* Terminal-style list bullets */
 ul li::before {
     content: ">";
     color: var(--header-pink);
@@ -104,7 +106,7 @@ ul li::before {
     font-weight: bold;
 }
 
-/* Code / Command Blocks */
+/* Code Snippets & Command Lines */
 code {
     color: var(--cmd-green);
     background: rgba(0, 255, 159, 0.05);
@@ -113,10 +115,24 @@ code {
     font-weight: bold;
 }
 
-/* Responsive Tweak for Mobile */
+/* Interactive Links */
+a {
+    color: var(--link-blue);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed transparent;
+    transition: 0.2s;
+}
+
+a:hover {
+    border-bottom: 1px dashed var(--header-pink);
+    color: var(--header-pink);
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
     header .center, footer .center {
-        display: none;
+        display: none; /* Hide middle text on mobile to save space */
     }
     
     .indent, ul {
@@ -126,16 +142,8 @@ code {
     body {
         padding: 20px 15px;
     }
-}
-
-/* Links (Optional) */
-a {
-    color: var(--link-blue);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--link-blue);
-}
-
-a:hover {
-    background-color: var(--link-blue);
-    color: var(--bg-color);
+    
+    header {
+        margin-bottom: 30px;
+    }
 }
