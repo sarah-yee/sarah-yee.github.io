@@ -1,174 +1,23 @@
 :root {
-    --stone-white: #f4f7f6;
-    --slate-blue: #d1d9e0;
-    --dusty-lavender: #e2d5de;
-    --deep-charcoal: #2c3e50;
-    --muted-steel: #5d6d7e;
-    --glass-white: rgba(255, 255, 255, 0.7);
+    /* Morning Orchard Palette: Fresh, Bright, Professional */
+    --leaf-green: #e8f5e9;    /* Very soft minty green */
+    --sky-mist: #e3f2fd;      /* Light airy blue */
+    --apricot-wash: #fff3e0;  /* Warm soft peach */
+    --text-main: #2d3436;      /* Soft charcoal (not pure black) */
+    --accent-green: #2ecc71;  /* Pop of vibrant green */
+    --accent-blue: #3498db;   /* Trustworthy blue */
+    --glass-white: rgba(255, 255, 255, 0.8);
 }
 
 body {
     margin: 0;
     padding: 0;
-    color: var(--deep-charcoal);
+    color: var(--text-main);
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    background: linear-gradient(-45deg, var(--stone-white), var(--slate-blue), var(--dusty-lavender));
+    /* Refreshing Gradient */
+    background: linear-gradient(-45deg, var(--leaf-green), var(--sky-mist), var(--apricot-wash));
     background-size: 400% 400%;
-    animation: ambientFlow 18s ease infinite;
+    animation: ambientFlow 12s ease infinite; /* Slightly faster for more "energy" */
     min-height: 100vh;
-}
-
-@keyframes ambientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-header {
-    padding: 80px 20px 40px;
-    text-align: center;
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin: 0;
-    background: linear-gradient(to right, #2c3e50, #7f8c8d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-    font-size: 0.85rem;
-    color: var(--muted-steel);
-    margin-top: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-main {
-    max-width: 850px;
-    margin: 0 auto 80px;
-    padding: 0 20px;
-}
-
-section {
-    background: var(--glass-white);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 40px;
-    margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.04);
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    color: var(--deep-charcoal);
-    margin-bottom: 25px;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: var(--muted-steel);
-}
-
-.fact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.fact-item {
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    border-left: 2px solid var(--slate-blue);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.4);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.tech-tag {
-    color: var(--muted-steel);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.timeline-item {
-    margin-bottom: 30px;
-    padding-left: 20px;
-    border-left: 1px solid var(--slate-blue);
-}
-
-.timeline-item h4 {
-    font-weight: 600;
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.location {
-    font-size: 0.8rem;
-    color: var(--muted-steel);
-    font-weight: 500;
-    margin: 4px 0 8px;
-}
-
-.contact-links {
-    margin-top: 25px;
-}
-
-.contact-links a {
-    display: inline-block;
-    margin: 0 8px;
-    padding: 12px 25px;
-    background: var(--deep-charcoal);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-.contact-links a:hover {
-    background: var(--muted-steel);
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: var(--muted-steel);
-    font-size: 0.7rem;
-}
-
-@media (max-width: 600px) {
-    .project-grid { grid-template-columns: 1fr; }
 }
